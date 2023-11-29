@@ -1,43 +1,54 @@
 package modelo;
 
 public class Principal {
-	private Persona unnamed_Persona;
-	private Trabajador unnamed_Trabajador;
-	private Empresa unnamed_Empresa;
+	private Persona persona;
+	private Trabajador trabajador;
+	private Empresa empresa;
 
 	// Constructor
 	public Principal() {
-		// Puedes inicializar instancias de Persona, Trabajador y Empresa aquí si es necesario
+		this.persona = new Persona("Nombre", "Apellido", "12345678-9");
+		this.trabajador = new Trabajador("NombreTrabajador", "ApellidoTrabajador", "98765432-1");
+		this.empresa = new Empresa();
+		// Puedes agregar más inicializaciones si es necesario
+	}
+
+	// Método principal
+	public void ejecutarPrograma() {
+		// Lógica principal del programa
+		System.out.println("Hola, mundo desde el método ejecutarPrograma!");
+		// Puedes interactuar con instancias de Persona, Trabajador y Empresa aquí
+	}
+
+	// Getters y setters para las instancias
+	public Persona getPersona() {
+		return persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
+
+	public Trabajador getTrabajador() {
+		return trabajador;
+	}
+
+	public void setTrabajador(Trabajador trabajador) {
+		this.trabajador = trabajador;
+	}
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 
 	// Método main
 	public static void main(String[] args) {
-		// Puedes agregar la lógica principal de tu programa aquí
-		System.out.println("Hola, mundo desde el método main!");
-	}
-
-	// Getters y setters para las instancias
-	public Persona getUnnamed_Persona() {
-		return unnamed_Persona;
-	}
-
-	public void setUnnamed_Persona(Persona unnamed_Persona) {
-		this.unnamed_Persona = unnamed_Persona;
-	}
-
-	public Trabajador getUnnamed_Trabajador() {
-		return unnamed_Trabajador;
-	}
-
-	public void setUnnamed_Trabajador(Trabajador unnamed_Trabajador) {
-		this.unnamed_Trabajador = unnamed_Trabajador;
-	}
-
-	public Empresa getUnnamed_Empresa() {
-		return unnamed_Empresa;
-	}
-
-	public void setUnnamed_Empresa(Empresa unnamed_Empresa) {
-		this.unnamed_Empresa = unnamed_Empresa;
+		// Crear una instancia de Principal y ejecutar el programa
+		Principal principal = new Principal();
+		principal.ejecutarPrograma();
 	}
 }

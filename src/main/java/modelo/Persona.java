@@ -38,4 +38,16 @@ public class Persona {
 	public void setRut(String rut) {
 		this.rut = rut;
 	}
+
+	// Método toString
+	@Override
+	public String toString() {
+		return "Persona{" +
+				"nombre='" + nombre + '\'' +
+				", apellido='" + apellido + '\'' +
+				", rut='" + rut + '\'' +
+				'}';
+	}
+
+	// Puedes implementar equals() y hashCode() según tus necesidades
 }

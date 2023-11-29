@@ -4,13 +4,13 @@ public class Trabajador extends Persona {
 	private String isapre;
 	private String afp;
 	private Empresa empresa;
-	public Principal unnamed_Principal_;
 
-	// Constructores
-	public Trabajador(String nombre, String apellido, String rut, String isapre, String afp) {
+	// Constructor
+	public Trabajador(String nombre, String apellido, String rut) {
 		super(nombre, apellido, rut);
-		this.isapre = isapre;
-		this.afp = afp;
+		// Asignar valores iniciales a isapre y afp si es necesario
+		this.isapre = "IsaprePorDefecto";
+		this.afp = "AfpPorDefecto";
 	}
 
 	// Métodos getter y setter para isapre
@@ -38,5 +38,18 @@ public class Trabajador extends Persona {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
+	}
+
+	// Método toString
+	@Override
+	public String toString() {
+		return "Trabajador{" +
+				"nombre='" + getNombre() + '\'' +
+				", apellido='" + getApellido() + '\'' +
+				", rut='" + getRut() + '\'' +
+				", isapre='" + isapre + '\'' +
+				", afp='" + afp + '\'' +
+				", empresa=" + empresa +
+				'}';
 	}
 }
